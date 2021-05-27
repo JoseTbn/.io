@@ -30,7 +30,7 @@ const  postResults = document.getElementById('postResults')
     
 
 postResults.innerHTML = data.results.sort((a,b) =>a.episodes-b.episodes).map(anime => {
-        return `  <div class=" large card">
+        return `  <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src="${anime.image_url}">
         </div>
@@ -39,7 +39,7 @@ postResults.innerHTML = data.results.sort((a,b) =>a.episodes-b.episodes).map(ani
         <p><a href="${anime.url}">myanimelist.net</a></p>
         </div>
         <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <span class="card-title grey-text text-darken-4">${anime.title}<i class="material-icons right">close</i></span>
         <p>${anime.synopsis}</p>
         <div> <img src="${anime.image_url}" alt=""> </div>
         </div>
